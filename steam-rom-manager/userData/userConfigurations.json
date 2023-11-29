@@ -1,0 +1,612 @@
+[
+    {
+        "parserType": "Glob",
+        "configTitle": "Nintendo Wii - Retroarch - Dolphin",
+        "steamDirectory": "${steamdirglobal}",
+        "steamCategory": "${Wii}",
+        "romDirectory": "${romsdirglobal}/Wii",
+        "executableArgs": "-L ${os:win|cores|${os:mac|${racores}|${os:linux|${racores}}}}${/}dolphin_libretro.${os:win|dll|${os:mac|dylib|${os:linux|so}}} \"${filePath}\"",
+        "executableModifier": "\"${exePath}\"",
+        "startInDirectory": "",
+        "titleModifier": "${fuzzyTitle}",
+        "imageProviders": [
+            "SteamGridDB"
+        ],
+        "onlineImageQueries": "${${fuzzyTitle}}",
+        "imagePool": "${fuzzyTitle}",
+        "userAccounts": {
+            "specifiedAccounts": ""
+        },
+        "executable": {
+            "path": "${retroarchpath}",
+            "shortcutPassthrough": false,
+            "appendArgsToExecutable": true
+        },
+        "parserInputs": {
+            "glob": "${title}@(.7z|.7Z|.ciso|.CISO|.dol|.DOL|.elf|.ELF|.gcz|.GCZ|.iso|.ISO|.rvz|.RVZ|.wad|.WAD|.wbfs|.WBFS|.wia|.WIA)"
+        },
+        "titleFromVariable": {
+            "limitToGroups": "",
+            "caseInsensitiveVariables": false,
+            "skipFileIfVariableWasNotFound": false,
+            "tryToMatchTitle": false
+        },
+        "fuzzyMatch": {
+            "replaceDiacritics": true,
+            "removeCharacters": true,
+            "removeBrackets": true
+        },
+        "controllers": {
+            "ps4": {
+                "title": "Gamepad",
+                "mappingId": "controller_ps4_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "ps5": {
+                "title": "Gamepad",
+                "mappingId": "controller_ps5_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "xbox360": {
+                "title": "Gamepad",
+                "mappingId": "controller_xbox360_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "xboxone": {
+                "title": "Gamepad",
+                "mappingId": "controller_xboxone_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_joycon_left": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_joycon_left_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_joycon_right": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_joycon_right_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_pro": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_pro_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "neptune": null
+        },
+        "imageProviderAPIs": {
+            "SteamGridDB": {
+                "nsfw": false,
+                "humor": false,
+                "styles": [],
+                "stylesHero": [],
+                "stylesLogo": [],
+                "stylesIcon": [],
+                "imageMotionTypes": [
+                    "static"
+                ]
+            }
+        },
+        "defaultImage": {
+            "tall": "",
+            "long": "",
+            "hero": "",
+            "logo": "",
+            "icon": ""
+        },
+        "localImages": {
+            "tall": "",
+            "long": "",
+            "hero": "",
+            "logo": "",
+            "icon": ""
+        },
+        "parserId": "170121248544114652",
+        "version": 15,
+        "disabled": false
+    },
+    {
+        "parserType": "Glob",
+        "configTitle": "Nintendo GameCube - Retroarch - Dolphin",
+        "steamDirectory": "${steamdirglobal}",
+        "steamCategory": "${Gamecube}",
+        "romDirectory": "${romsdirglobal}/GameCube",
+        "executableArgs": "-L ${os:win|cores|${os:mac|${racores}|${os:linux|${racores}}}}${/}dolphin_libretro.${os:win|dll|${os:mac|dylib|${os:linux|so}}} \"${filePath}\"",
+        "executableModifier": "\"${exePath}\"",
+        "startInDirectory": "",
+        "titleModifier": "${fuzzyTitle}",
+        "imageProviders": [
+            "SteamGridDB"
+        ],
+        "onlineImageQueries": "${${fuzzyTitle}}",
+        "imagePool": "${fuzzyTitle}",
+        "userAccounts": {
+            "specifiedAccounts": ""
+        },
+        "executable": {
+            "path": "${retroarchpath}",
+            "shortcutPassthrough": false,
+            "appendArgsToExecutable": true
+        },
+        "parserInputs": {
+            "glob": "${title}@(.7z|.7Z|.ciso|.CISO|.dol|.DOL|.elf|.ELF|.gcm|.GCM|.gcz|.GCZ|.iso|.ISO|.nkit.iso|.NKIT.ISO|.rvz|.RVZ|.wad|.WAD|.wia|.WIA)"
+        },
+        "titleFromVariable": {
+            "limitToGroups": "",
+            "caseInsensitiveVariables": false,
+            "skipFileIfVariableWasNotFound": false,
+            "tryToMatchTitle": false
+        },
+        "fuzzyMatch": {
+            "replaceDiacritics": true,
+            "removeCharacters": true,
+            "removeBrackets": true
+        },
+        "controllers": {
+            "ps4": {
+                "title": "Gamepad",
+                "mappingId": "controller_ps4_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "ps5": {
+                "title": "Gamepad",
+                "mappingId": "controller_ps5_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "xbox360": {
+                "title": "Gamepad",
+                "mappingId": "controller_xbox360_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "xboxone": {
+                "title": "Gamepad",
+                "mappingId": "controller_xboxone_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_joycon_left": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_joycon_left_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_joycon_right": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_joycon_right_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_pro": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_pro_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "neptune": null
+        },
+        "imageProviderAPIs": {
+            "SteamGridDB": {
+                "nsfw": false,
+                "humor": false,
+                "styles": [],
+                "stylesHero": [],
+                "stylesLogo": [],
+                "stylesIcon": [],
+                "imageMotionTypes": [
+                    "static"
+                ]
+            }
+        },
+        "defaultImage": {
+            "tall": "",
+            "long": "",
+            "hero": "",
+            "logo": "",
+            "icon": ""
+        },
+        "localImages": {
+            "tall": "",
+            "long": "",
+            "hero": "",
+            "logo": "",
+            "icon": ""
+        },
+        "parserId": "17012170867035065",
+        "disabled": false,
+        "version": 15
+    },
+    {
+        "parserType": "Glob",
+        "configTitle": "Nintendo SNES - Retroarch - Snes9x",
+        "steamDirectory": "${steamdirglobal}",
+        "steamCategory": "${SNES}",
+        "romDirectory": "${romsdirglobal}/SNES",
+        "executableArgs": "-L ${os:win|cores|${os:mac|${racores}|${os:linux|${racores}}}}${/}snes9x_libretro.${os:win|dll|${os:mac|dylib|${os:linux|so}}} \"${filePath}\"",
+        "executableModifier": "\"${exePath}\"",
+        "startInDirectory": "",
+        "titleModifier": "${fuzzyTitle}",
+        "imageProviders": [
+            "SteamGridDB"
+        ],
+        "onlineImageQueries": "${${fuzzyTitle}}",
+        "imagePool": "${fuzzyTitle}",
+        "userAccounts": {
+            "specifiedAccounts": ""
+        },
+        "executable": {
+            "path": "${retroarchpath}",
+            "shortcutPassthrough": false,
+            "appendArgsToExecutable": true
+        },
+        "parserInputs": {
+            "glob": "${title}@(.7z|.7Z|.bs|.BS|.fig|.FIG|.sfc|.SFC|.smc|.SMC|.swc|.SWC|.zip|.ZIP)"
+        },
+        "titleFromVariable": {
+            "limitToGroups": "",
+            "caseInsensitiveVariables": false,
+            "skipFileIfVariableWasNotFound": false,
+            "tryToMatchTitle": false
+        },
+        "fuzzyMatch": {
+            "replaceDiacritics": true,
+            "removeCharacters": true,
+            "removeBrackets": true
+        },
+        "controllers": {
+            "ps4": {
+                "title": "Gamepad",
+                "mappingId": "controller_ps4_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "ps5": {
+                "title": "Gamepad",
+                "mappingId": "controller_ps5_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "xbox360": {
+                "title": "Gamepad",
+                "mappingId": "controller_xbox360_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "xboxone": {
+                "title": "Gamepad",
+                "mappingId": "controller_xboxone_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_joycon_left": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_joycon_left_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_joycon_right": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_joycon_right_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_pro": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_pro_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "neptune": null
+        },
+        "imageProviderAPIs": {
+            "SteamGridDB": {
+                "nsfw": false,
+                "humor": false,
+                "styles": [],
+                "stylesHero": [],
+                "stylesLogo": [],
+                "stylesIcon": [],
+                "imageMotionTypes": [
+                    "static"
+                ]
+            }
+        },
+        "defaultImage": {
+            "tall": "",
+            "long": "",
+            "hero": "",
+            "logo": "",
+            "icon": ""
+        },
+        "localImages": {
+            "tall": "",
+            "long": "",
+            "hero": "",
+            "logo": "",
+            "icon": ""
+        },
+        "parserId": "170121722067810436",
+        "version": 15
+    },
+    {
+        "parserType": "Glob",
+        "configTitle": "Sony PlayStation Portable - Retroarch - PPSSPP",
+        "steamDirectory": "${steamdirglobal}",
+        "steamCategory": "${PSP}",
+        "romDirectory": "${romsdirglobal}/PSP",
+        "executableArgs": "-L ${os:win|cores|${os:mac|${racores}|${os:linux|${racores}}}}${/}ppsspp_libretro.${os:win|dll|${os:mac|dylib|${os:linux|so}}} \"${filePath}\"",
+        "executableModifier": "\"${exePath}\"",
+        "startInDirectory": "",
+        "titleModifier": "${fuzzyTitle}",
+        "fetchControllerTemplatesButton": null,
+        "removeControllersButton": null,
+        "imageProviders": [
+            "SteamGridDB"
+        ],
+        "onlineImageQueries": "${${fuzzyTitle}}",
+        "imagePool": "${fuzzyTitle}",
+        "userAccounts": {
+            "specifiedAccounts": ""
+        },
+        "executable": {
+            "path": "${retroarchpath}",
+            "shortcutPassthrough": false,
+            "appendArgsToExecutable": true
+        },
+        "parserInputs": {
+            "glob": "${title}@(.7z|.7Z|.elf|.ELF|.cso|.CSO|.iso|.ISO|.pbp|.PBP|.prx|.PRX)"
+        },
+        "titleFromVariable": {
+            "limitToGroups": "",
+            "caseInsensitiveVariables": false,
+            "skipFileIfVariableWasNotFound": false,
+            "tryToMatchTitle": false
+        },
+        "fuzzyMatch": {
+            "replaceDiacritics": true,
+            "removeCharacters": true,
+            "removeBrackets": true
+        },
+        "controllers": {
+            "ps4": {
+                "title": "Gamepad",
+                "mappingId": "controller_ps4_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "ps5": {
+                "title": "Gamepad",
+                "mappingId": "controller_ps5_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "xbox360": {
+                "title": "Gamepad",
+                "mappingId": "controller_xbox360_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "xboxone": {
+                "title": "Gamepad",
+                "mappingId": "controller_xboxone_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_joycon_left": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_joycon_left_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_joycon_right": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_joycon_right_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_pro": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_pro_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "neptune": null
+        },
+        "imageProviderAPIs": {
+            "SteamGridDB": {
+                "nsfw": false,
+                "humor": false,
+                "styles": [],
+                "stylesHero": [],
+                "stylesLogo": [],
+                "stylesIcon": [],
+                "imageMotionTypes": [
+                    "static"
+                ]
+            }
+        },
+        "defaultImage": {
+            "tall": "",
+            "long": "",
+            "hero": "",
+            "logo": "",
+            "icon": ""
+        },
+        "localImages": {
+            "tall": "",
+            "long": "",
+            "hero": "",
+            "logo": "",
+            "icon": ""
+        },
+        "parserId": "170123664678734165",
+        "version": 15
+    },
+    {
+        "parserType": "Glob",
+        "configTitle": "Sony PlayStation 2 - Retroarch - Play!",
+        "steamDirectory": "${steamdirglobal}",
+        "steamCategory": "${PS2}",
+        "romDirectory": "${romsdirglobal}/PS2",
+        "executableArgs": "-L ${os:win|cores|${os:mac|${racores}|${os:linux|${racores}}}}${/}play_libretro.${os:win|dll|${os:mac|dylib|${os:linux|so}}} \"${filePath}\"",
+        "executableModifier": "\"${exePath}\"",
+        "startInDirectory": "",
+        "titleModifier": "${fuzzyTitle}",
+        "fetchControllerTemplatesButton": null,
+        "removeControllersButton": null,
+        "imageProviders": [
+            "SteamGridDB"
+        ],
+        "onlineImageQueries": "${${fuzzyTitle}}",
+        "imagePool": "${fuzzyTitle}",
+        "userAccounts": {
+            "specifiedAccounts": ""
+        },
+        "executable": {
+            "path": "${retroarchpath}",
+            "shortcutPassthrough": false,
+            "appendArgsToExecutable": true
+        },
+        "parserInputs": {
+            "glob": "${title}@(.7z|.7Z|.chd|.CHD|.cso|.CSO|.cue|.CUE|.elf|.ELF|.iso|.ISO|.isz|.ISZ|.zip|.ZIP)"
+        },
+        "titleFromVariable": {
+            "limitToGroups": "",
+            "caseInsensitiveVariables": false,
+            "skipFileIfVariableWasNotFound": false,
+            "tryToMatchTitle": false
+        },
+        "fuzzyMatch": {
+            "replaceDiacritics": true,
+            "removeCharacters": true,
+            "removeBrackets": true
+        },
+        "controllers": {
+            "ps4": {
+                "title": "Gamepad",
+                "mappingId": "controller_ps4_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "ps5": {
+                "title": "Gamepad",
+                "mappingId": "controller_ps5_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "xbox360": {
+                "title": "Gamepad",
+                "mappingId": "controller_xbox360_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "xboxone": {
+                "title": "Gamepad",
+                "mappingId": "controller_xboxone_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_joycon_left": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_joycon_left_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_joycon_right": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_joycon_right_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "switch_pro": {
+                "title": "Gamepad",
+                "mappingId": "controller_switch_pro_gamepad_joystick.vdf",
+                "profileType": "template"
+            },
+            "neptune": null
+        },
+        "imageProviderAPIs": {
+            "SteamGridDB": {
+                "nsfw": false,
+                "humor": false,
+                "styles": [],
+                "stylesHero": [],
+                "stylesLogo": [],
+                "stylesIcon": [],
+                "imageMotionTypes": [
+                    "static"
+                ]
+            }
+        },
+        "defaultImage": {
+            "tall": "",
+            "long": "",
+            "hero": "",
+            "logo": "",
+            "icon": ""
+        },
+        "localImages": {
+            "tall": "",
+            "long": "",
+            "hero": "",
+            "logo": "",
+            "icon": ""
+        },
+        "parserId": "170123675333199365",
+        "version": 15
+    },
+    {
+        "parserType": "Glob",
+        "configTitle": "Sony PlayStation 3 - RPCS3 (Extracted ISO/PSN)",
+        "steamDirectory": "${steamdirglobal}",
+        "steamCategory": "${PS3}",
+        "romDirectory": "${romsdirglobal}/PS3",
+        "executableArgs": "--no-gui \"${filePath}\"",
+        "executableModifier": "\"${exePath}\"",
+        "startInDirectory": "",
+        "titleModifier": "${fuzzyTitle}",
+        "fetchControllerTemplatesButton": null,
+        "removeControllersButton": null,
+        "imageProviders": [
+            "SteamGridDB"
+        ],
+        "onlineImageQueries": "${${fuzzyTitle}}",
+        "imagePool": "${fuzzyTitle}",
+        "userAccounts": {
+            "specifiedAccounts": ""
+        },
+        "executable": {
+            "path": "/usr/local/bin/rpcs3",
+            "shortcutPassthrough": false,
+            "appendArgsToExecutable": true
+        },
+        "parserInputs": {
+            "glob": "${title}/PS3_GAME/USRDIR/@(eboot.bin|EBOOT.BIN)"
+        },
+        "titleFromVariable": {
+            "limitToGroups": "${PS3}",
+            "caseInsensitiveVariables": false,
+            "skipFileIfVariableWasNotFound": false,
+            "tryToMatchTitle": true
+        },
+        "fuzzyMatch": {
+            "replaceDiacritics": true,
+            "removeCharacters": true,
+            "removeBrackets": true
+        },
+        "controllers": {
+            "ps4": null,
+            "ps5": null,
+            "xbox360": null,
+            "xboxone": null,
+            "switch_joycon_left": null,
+            "switch_joycon_right": null,
+            "switch_pro": null,
+            "neptune": null
+        },
+        "imageProviderAPIs": {
+            "SteamGridDB": {
+                "nsfw": false,
+                "humor": false,
+                "styles": [],
+                "stylesHero": [],
+                "stylesLogo": [],
+                "stylesIcon": [],
+                "imageMotionTypes": [
+                    "static"
+                ]
+            }
+        },
+        "defaultImage": {
+            "tall": "",
+            "long": "",
+            "hero": "",
+            "logo": "",
+            "icon": ""
+        },
+        "localImages": {
+            "tall": "",
+            "long": "",
+            "hero": "",
+            "logo": "",
+            "icon": ""
+        },
+        "parserId": "170123687425849523",
+        "version": 15
+    }
+]

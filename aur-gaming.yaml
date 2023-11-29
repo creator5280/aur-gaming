@@ -1,0 +1,5 @@
+name: aur-gaming
+base: docker.io/creator5280/vanilla-subsystem-aur-gaming:latest
+packages: []
+pkgmanager: yay
+builtin: false

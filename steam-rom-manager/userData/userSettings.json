@@ -1,0 +1,34 @@
+{
+	"fuzzyMatcher": {
+		"timestamps": {
+			"check": 1701211927215,
+			"download": 1701211927215
+		},
+		"verbose": false,
+		"filterProviders": true
+	},
+	"environmentVariables": {
+		"steamDirectory": "/home/lyndwil/.steam/steam",
+		"userAccounts": "",
+		"romsDirectory": "/home/lyndwil/Documents/ROMS",
+		"retroarchPath": "/usr/sbin/retroarch",
+		"raCoresDirectory": "/lib64/libretro",
+		"localImagesDirectory": ""
+	},
+	"previewSettings": {
+		"retrieveCurrentSteamImages": true,
+		"deleteDisabledShortcuts": false,
+		"imageZoomPercentage": 40,
+		"preload": false
+	},
+	"enabledProviders": [
+		"SteamGridDB"
+	],
+	"batchDownloadSize": 50,
+	"language": "en-US",
+	"theme": "Deck",
+	"offlineMode": false,
+	"navigationWidth": 0,
+	"clearLogOnTest": false,
+	"version": 6
+}
