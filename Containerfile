@@ -43,10 +43,10 @@ RUN yay -S --noconfirm fuse2; \
 	wget -P /var/containerFiles/appimages/ --content-disposition https://rpcs3.net/latest-appimage; \
 	ln -s /var/containerFiles/appimages/rpcs3*.AppImage /usr/local/bin/rpcs3;
 
-# Install and Configure Steam Rom Manager
-#ps -p 1 -o comm=
+# Install and Configure Dolphin-emu
+RUN yay -S --noconfirm dolphin-emu;
 
-#RUN yay -S --noconfirm steam-rom-manager-git
+# Install and Configure Steam Rom Manager
 RUN yay -S --noconfirm gtk3; \
 	wget -P /var/containerFiles/appimages/ --content-disposition https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.4.17/Steam-ROM-Manager-2.4.17.AppImage; \
 	ln -s /var/containerFiles/appimages/Steam-ROM-Manager*.AppImage /usr/local/bin/steam-rom-manager; \

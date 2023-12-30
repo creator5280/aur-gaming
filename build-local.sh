@@ -62,6 +62,7 @@ apx subsystems new\
 # Export binaries
 apx aurg export --bin /usr/sbin/steam;
 apx aurg export --bin /usr/sbin/retroarch;
+apx aurg export --bin /usr/sbin/dolphin-emu;
 apx aurg export --bin /usr/local/bin/steam-rom-manager;
 
 
