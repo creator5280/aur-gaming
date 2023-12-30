@@ -44,8 +44,14 @@ RUN yay -S --noconfirm fuse2; \
 	ln -s /var/containerFiles/appimages/rpcs3*.AppImage /usr/local/bin/rpcs3;
 
 # Install and Configure Steam Rom Manager
-RUN wget -P /var/containerFiles/appimages/ --content-disposition https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.4.17/Steam-ROM-Manager-2.4.17.AppImage; \
+#ps -p 1 -o comm=
+
+#RUN yay -S --noconfirm steam-rom-manager-git
+RUN yay -S --noconfirm gtk3; \
+	wget -P /var/containerFiles/appimages/ --content-disposition https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.4.17/Steam-ROM-Manager-2.4.17.AppImage; \
 	ln -s /var/containerFiles/appimages/Steam-ROM-Manager*.AppImage /usr/local/bin/steam-rom-manager; \
 	chmod +x /usr/local/bin/*; \
 	mkdir -p /var/containerFiles/steam-rom-manager/userData;
 COPY steam-rom-manager/userData/user* /var/containerFiles/steam-rom-manager/userData/
+
+
