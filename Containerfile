@@ -1,9 +1,11 @@
 FROM docker.io/library/archlinux:latest
 
 # Install make packages
-RUN pacman -Syu --noconfirm && pacman -S --noconfirm base-devel git;
+RUN pacman -Syu --noconfirm && \
+	pacman-key --refresh-keys && \
+	pacman -S --noconfirm base-devel git;
 
-# Create Builder User
+# Create Builder User (used for setting up Yay)
 RUN useradd -m -G wheel builder && passwd -d builder; \
 	echo 'builder ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers;
 
@@ -14,15 +16,25 @@ RUN mkdir -p /tmp/yay-build; \
 	su - builder -c "cd /tmp/yay-build/yay && makepkg -si --noconfirm"; \
 	rm -rf /tmp/yay-build;
 
-# Install and Configure Steam
+# Enable Nvidea passthrough
+ENV NVIDIA_DRIVER_CAPABILITIES=all
+ENV NVIDIA_VISIBLE_DEVICES=all
+
+# Install Vulkan
+RUN yay -S --noconfirm vulkan-icd-loader \
+	nvidia-utils \
+#	mesa-utils \
+#	pciutils \
+#	vkdevicechooser \
+	vulkan-tools;
+
+# Install Steam
 RUN echo "[multilib]" >> /etc/pacman.conf && \
 	echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf; \
 	pacman -Sy; \
-	yay -S --noconfirm steam; \
-	mkdir -p /var/containerFiles/steam/userdata/userid/config;
-COPY steam/userdata/userid/config/shortcuts.vdf /var/containerFiles/steam/userdata/userid/config/
+	yay -S --noconfirm steam;
 
-# Install and Configure RetroArch
+# Install RetroArch and Cores
 RUN yay -S --noconfirm retroarch \
 	retroarch-assets-ozone \
 	retroarch-assets-xmb \
@@ -31,20 +43,19 @@ RUN yay -S --noconfirm retroarch \
 	libretro-citra \
 #	libretro-dolphin \ # Removed in favor of standalone, due to better controller support
 	libretro-ppsspp \
-	libretro-play \
-	wget; \
-	mkdir -p /var/containerFiles/retroArch; \
-	cd /var/containerFiles/retroArch; \
-	git clone --depth=1 https://github.com/libretro/dolphin.git;
-COPY retroArch/* /var/containerFiles/retroArch/
+	libretro-play;
 
-# Install and Configure RPCS3
-RUN yay -S --noconfirm fuse2; \
+# Install RPCS3
+RUN yay -S --noconfirm fuse2 \
+	wget; \
 	wget -P /var/containerFiles/appimages/ --content-disposition https://rpcs3.net/latest-appimage; \
 	ln -s /var/containerFiles/appimages/rpcs3*.AppImage /usr/local/bin/rpcs3;
 
-# Install and Configure Dolphin-emu
+# Install Dolphin-emu
 RUN yay -S --noconfirm dolphin-emu;
+
+# Install Heroric Games Launcher
+#RUN yay -S --noconfirm heroic-games-launcher;
 
 # Install and Configure Steam Rom Manager
 RUN yay -S --noconfirm gtk3; \

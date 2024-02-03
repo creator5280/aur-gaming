@@ -24,10 +24,10 @@ fi
 
 
 # Remove application and game files
-sudo rm -r ~/.local/share/Steam
+#sudo rm -r ~/.local/share/Steam
 sudo rm -r ~/.config/steam-rom-manager
 sudo rm -r ~/.config/retroarch
-sudo rm -r ~/.steam
+#sudo rm -r ~/.steam
 
 
 # Configure yay pkgmanager
